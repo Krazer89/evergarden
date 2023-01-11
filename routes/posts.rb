@@ -15,7 +15,7 @@ class Evergarden < Sinatra::Base
     end
 
     options = {
-      "offset" => (page-1) * limit,
+      "offset" => [(page-1) * limit, 0].max,
       "limit" => limit
     }
 
