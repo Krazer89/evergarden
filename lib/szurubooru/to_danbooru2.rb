@@ -17,6 +17,8 @@ module Szurubooru
         preview_file_url: domain + "/" + body["thumbnailUrl"],
         rating: rating(body["safety"]),
         image_width: body["canvasWidth"],
+        score: body["score"],
+        fav_count: body["favoriteCount"],
         image_height: body["canvasHeight"],
         file_size: body["fileSize"],
         md5: body["checksum"],
