@@ -33,7 +33,7 @@ module Szurubooru
       {
         id: body["id"],
         name: body["names"][0],
-        description: body["description"],
+        description: body["description"] ||= "",
         created_at: body["creationTime"],
         updated_at: body["lastEditTime"],
         category: body["category"],
