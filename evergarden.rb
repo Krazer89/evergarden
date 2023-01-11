@@ -10,8 +10,8 @@ class Evergarden < Sinatra::Base
   configure do
     set :domain, ENV["SZURUBOORU_HOST"] || "http://bijutsu.nori.daikon"
     set :external_domain, ENV["EXTERNAL_SZURUBOORU_HOST"] || "http://bijutsu.nori.daikon"
-    set :username, "nonbirithm"
-    set :auth, "auth"
+    set :username, ENV["SZURUBOORU_USER"] || "nonbirithm"
+    set :auth, ENV["SZURUBOORU_AUTH"] || "auth"
   end
 
   configure :development do
