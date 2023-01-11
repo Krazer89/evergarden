@@ -32,7 +32,7 @@ module Szurubooru
 
       {
         id: body["id"],
-        name: body["names"][0].humanize(capitalize: false, keep_id_suffix: true),
+        name: body["names"][0].split('_').join(' '),
         description: body["description"] ||= "",
         created_at: body["creationTime"],
         updated_at: body["lastEditTime"],
